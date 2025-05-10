@@ -1,0 +1,776 @@
+@keyframes levitate {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeInRight {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.animateIn {
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+
+.fadeInUp {
+	animation: fadeInUp 1s ease-out forwards;
+}
+
+.fadeInLeft {
+	animation: fadeInLeft 1s ease-out forwards;
+}
+
+.fadeInRight {
+	animation: fadeInRight 1s ease-out forwards;
+}
+
+@keyframes gradientFlow {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes animateBorder {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 200% 50%;
+	}
+}
+
+.heroContainer {
+	background-image: url(/public/heroBg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin-bottom: 64px;
+	padding-top: 75px;
+
+	.heroWrapper {
+		max-width: 1240px;
+		margin: 0 auto;
+	}
+
+	.heroContent {
+		display: flex;
+		padding-top: 64px;
+		padding-bottom: 134px;
+		display: flex;
+		justify-content: center;
+		justify-content: space-around;
+		background-image: url(/public/heroContentBg.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+
+		.heroTxtWrapper {
+			.heroTxt {
+				padding-bottom: 44px;
+				padding-top: 44px;
+
+				h1 {
+					color: #f9f9f9;
+					font-family: Helvetica;
+					font-size: 40px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 140%; /* 56px */
+					letter-spacing: 11.2px;
+					text-transform: uppercase;
+					max-width: 723px;
+					padding-bottom: 30px;
+				}
+
+				p {
+					color: #f9f9f9;
+					font-family: 'TT Hoves Pro Trl Expanded';
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 28px; /* 140% */
+					padding-bottom: 6px;
+					max-width: 550px;
+				}
+
+				& :nth-last-child(1) {
+					max-width: 660px;
+				}
+			}
+
+			.heroBtn {
+				max-width: 350px;
+
+				button {
+					color: #fff;
+					text-align: center;
+					font-family: Helvetica;
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 24px;
+					border-radius: 20px;
+					width: 100%;
+					height: 48px;
+
+					background: linear-gradient(
+						135deg,
+						#0a7cff,
+						#0072ff,
+						#00c6ff,
+						#0a7cff
+					);
+					background-size: 400%;
+					animation: gradientFlow 4s ease infinite;
+					box-shadow: 0 0 12px rgba(10, 124, 255, 0.3),
+						0 0 24px rgba(10, 124, 255, 0.2), 0 0 48px rgba(10, 124, 255, 0.15);
+					transition: box-shadow 0.3s ease;
+
+					&:hover {
+						box-shadow: 0 0 24px rgba(10, 124, 255, 0.3),
+							0 0 24px rgba(10, 124, 255, 0.2),
+							0 0 48px rgba(10, 124, 255, 0.15);
+					}
+				}
+			}
+		}
+	}
+}
+
+.faqContainer {
+	display: flex;
+	justify-content: center;
+	.faqWrapper {
+		width: 100%;
+		max-width: 1240px;
+		padding-top: 64px;
+		padding-bottom: 100px;
+
+		.faqContent {
+			border-radius: 25px;
+			background: linear-gradient(
+					rgba(0, 183, 255, 0.1),
+					rgba(0, 183, 255, 0.1)
+				),
+				#000;
+			box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+			padding: 64px 41px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			overflow: hidden;
+
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				border-radius: inherit;
+				padding: 1px; // толщина рамки
+				background: linear-gradient(
+					360deg,
+					rgba(130, 161, 164, 0.651),
+					rgba(105, 105, 105, 1),
+					rgba(249, 248, 246, 0),
+					rgba(212, 212, 212, 1),
+					rgba(130, 161, 164, 0.027)
+				);
+				-webkit-mask: linear-gradient(#fff 0 0) content-box,
+					linear-gradient(#fff 0 0);
+				mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+				pointer-events: none; // чтобы клик проходил внутрь
+				z-index: 0;
+			}
+
+			.faqImg {
+				img {
+					max-width: 575px;
+
+					opacity: 0;
+					transform: translateY(40px);
+					transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+					&.show {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
+			}
+		}
+	}
+}
+
+.chooseContainer {
+	background-image: url(/public/chooseBg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+
+	.chooseWrapper {
+		width: 100%;
+		max-width: 1240px;
+
+		.chooseContent {
+			h2 {
+				color: #d9d9d9;
+				text-align: center;
+				font-family: 'TT Hoves Pro Trl Expanded';
+				font-size: 45px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 50.4px; /* 112% */
+				letter-spacing: 1px;
+				padding-bottom: 32px;
+				padding-top: 19px;
+			}
+
+			.arrowTxt {
+				color: #d9d9d9;
+				text-align: center;
+				font-family: 'TT Hoves Pro Trl Expanded';
+				font-size: 28px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 50.4px; /* 180% */
+				letter-spacing: 1px;
+				padding-top: 32px;
+				padding-bottom: 19px;
+			}
+
+			.chooseContentTop {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+
+			.leftContent,
+			.rightContent {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				h3 {
+					text-align: center;
+					color: #fff;
+					text-align: center;
+					font-family: Helvetica;
+					font-size: 28px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 31.5px; /* 112.5% */
+					letter-spacing: 0.5px;
+					text-transform: uppercase;
+					padding-bottom: 14px;
+				}
+
+				li {
+					max-width: 560px;
+					color: #fff;
+					font-family: 'TT Hoves Pro Trl Expanded';
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 27.2px; /* 170% */
+					list-style: disc;
+					padding-bottom: 4px;
+					margin-left: 25px;
+				}
+
+				.chooseImg {
+					padding-bottom: 64px;
+
+					img {
+						max-width: 205px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.handsContainer {
+	display: flex;
+	justify-content: center;
+
+	.handsWrapper {
+		width: 100%;
+		max-width: 1240px;
+		h2 {
+			color: #d9d9d9;
+			text-align: center;
+			font-family: 'TT Hoves Pro Trl Expanded';
+			font-size: 45px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 50.4px; /* 112% */
+			letter-spacing: 1px;
+			padding-top: 100px;
+		}
+
+		h3 {
+			color: #d9d9d9;
+			text-align: center;
+			font-family: 'TT Hoves Pro Trl Expanded';
+			font-size: 28px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 46.4px; /* 165.714% */
+			letter-spacing: 1px;
+			padding-bottom: 32px;
+		}
+
+		.handsContent {
+			display: flex;
+			justify-content: space-between;
+			padding-bottom: 43px;
+
+			img {
+				max-width: 369px;
+				animation: levitate 3s ease-in-out infinite;
+			}
+
+			.leftContent,
+			.rightContent {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+
+				.handsLeftBlocks,
+				.handsRightBlocks {
+					padding: 32px;
+					background: rgba(0, 183, 255, 0.1);
+					box-shadow: 0px 4px 20px 0px rgba(10, 124, 255, 0.15);
+					backdrop-filter: blur(2px);
+
+					&::before {
+						content: '';
+						position: absolute;
+						inset: 0;
+						padding: 1px;
+						border-radius: inherit;
+						background: linear-gradient(
+							90deg,
+							rgba(10, 124, 255, 1),
+							rgba(255, 255, 255, 0),
+							rgba(10, 124, 255, 1)
+						);
+						background-size: 200% 200%;
+						animation: animateBorder 4s linear infinite;
+
+						-webkit-mask: linear-gradient(#fff 0 0) content-box,
+							linear-gradient(#fff 0 0);
+						mask: linear-gradient(#fff 0 0) content-box,
+							linear-gradient(#fff 0 0);
+						-webkit-mask-composite: xor;
+						mask-composite: exclude;
+
+						pointer-events: none;
+						z-index: 0;
+					}
+
+					p {
+						color: #fff;
+						font-family: 'TT Hoves Pro Trl Expanded';
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: 32px; /* 200% */
+						letter-spacing: -0.48px;
+						max-width: 350px;
+					}
+				}
+
+				.handsLeftBlocks {
+					border-radius: 24px 24px 4px 24px;
+				}
+
+				.handsRightBlocks {
+					border-radius: 24px 24px 24px 4px;
+				}
+			}
+		}
+	}
+}
+
+.earthContainer {
+	background-image: url(/public/earthBg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	padding: 64px 0px;
+
+	.earthWrapper {
+		width: 100%;
+		max-width: 1240px;
+
+		.earthContent {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.earthLeft {
+				max-width: 394px;
+				width: 100%;
+				img {
+					max-width: 440px;
+					width: 100%;
+				}
+			}
+
+			.earthRightWrapper {
+				display: flex;
+				align-items: center;
+				gap: 24px;
+			}
+
+			.earthMiddle {
+				img {
+					width: auto;
+					max-width: none;
+					height: auto;
+					display: block;
+					min-width: 300px; //
+				}
+			}
+
+			.earthRight {
+				.topList,
+				.bottomList {
+					h2 {
+						font-family: 'TT Hoves Pro Trl Expanded';
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: 27.2px; /* 136% */
+						background: var(
+							--gradient,
+							linear-gradient(180deg, #34abe0 0%, #0a7cff 100%)
+						);
+						background-clip: text;
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+						padding-bottom: 12px;
+					}
+
+					ul {
+						display: flex;
+						flex-direction: column;
+						gap: 12px;
+						min-width: 330px;
+						li {
+							color: #fff;
+							font-family: 'TT Hoves Pro Trl Expanded';
+							font-size: 16px;
+							font-style: normal;
+							font-weight: 500;
+							line-height: 27.2px; /* 170% */
+						}
+					}
+				}
+
+				.bottomList {
+					padding-top: 42px;
+				}
+			}
+		}
+	}
+}
+
+.countingContainer {
+	display: flex;
+	justify-content: center;
+	padding: 64px 0px;
+	.countingWrapper {
+		width: 100%;
+		max-width: 1240px;
+		.countingContent {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			background: rgba(0, 183, 255, 0.1);
+			box-shadow: 0px 4px 20px 0px rgba(10, 124, 255, 0.15);
+			backdrop-filter: blur(2px);
+			border-radius: 24px;
+			padding: 32px 26px;
+
+			svg {
+				max-height: 101px;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				padding: 1px;
+				border-radius: inherit;
+				background: linear-gradient(
+					90deg,
+					rgba(10, 124, 255, 1),
+					rgba(255, 255, 255, 0),
+					rgba(10, 124, 255, 1)
+				);
+				background-size: 200% 200%;
+				animation: animateBorder 4s linear infinite;
+
+				-webkit-mask: linear-gradient(#fff 0 0) content-box,
+					linear-gradient(#fff 0 0);
+				mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+
+				pointer-events: none;
+				z-index: 0;
+			}
+
+			.countingBlock {
+				h2 {
+					color: #0a7cff;
+					font-family: 'TT Hoves Pro Trl Expanded';
+					font-size: 45px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 50.4px; /* 112% */
+					letter-spacing: 1px;
+					padding-bottom: 8px;
+				}
+				p {
+					color: #fff;
+					font-family: Helvetica;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 27.3px; /* 170.625% */
+					text-transform: capitalize;
+					max-width: 340px;
+				}
+			}
+		}
+	}
+}
+
+.keyContainer {
+	background-image: url(/public/keyBg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 16px 0px;
+	display: flex;
+	justify-content: center;
+	.keyWrapper {
+		width: 100%;
+		max-width: 1240px;
+		h2 {
+			color: #fff;
+			font-family: 'TT Hoves Pro Trl Expanded';
+			font-size: 45px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 50.4px; /* 112% */
+			letter-spacing: 1px;
+		}
+		h3 {
+			color: #fff;
+			font-family: 'TT Hoves Pro Trl Expanded';
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 50.4px; /* 157.5% */
+			letter-spacing: 1px;
+			padding: 24px 0px;
+		}
+		.keyContent {
+			display: grid;
+			grid-template-columns: auto auto;
+			gap: 12px;
+		}
+
+		.keyBlock,
+		.keyBlockGray {
+			width: 100%;
+			padding: 22px 24px;
+			border-radius: 24px;
+			h4 {
+				color: #fff;
+				font-family: Helvetica;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 28px; /* 140% */
+				text-transform: capitalize;
+			}
+			p {
+				color: #fff;
+				font-family: 'TT Hoves Pro Trl Expanded';
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 30px; /* 187.5% */
+				letter-spacing: 1px;
+				padding-top: 6px;
+				max-width: 566px;
+			}
+		}
+
+		.keyBlock {
+			border-radius: 24px;
+			background: rgba(0, 183, 255, 0.1);
+			backdrop-filter: blur(5px);
+		}
+
+		.keyBlockGray {
+			border-radius: 24px;
+			background: rgba(234, 234, 234, 0.05);
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				border-radius: inherit;
+				padding: 1px; // толщина рамки
+				background: linear-gradient(
+					360deg,
+					rgba(130, 161, 164, 0.651),
+					rgba(105, 105, 105, 1),
+					rgba(249, 248, 246, 0),
+					rgba(212, 212, 212, 1),
+					rgba(130, 161, 164, 0.027)
+				);
+				-webkit-mask: linear-gradient(#fff 0 0) content-box,
+					linear-gradient(#fff 0 0);
+				mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+				pointer-events: none; // чтобы клик проходил внутрь
+				z-index: 0;
+			}
+		}
+	}
+}
+
+.featuresContainer {
+	display: flex;
+	justify-content: center;
+	padding: 32px 0px;
+	.featuresWrapper {
+		width: 100%;
+		max-width: 1240px;
+		.featuresContent {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+
+			.featuresRight {
+				img {
+					max-width: 400px;
+				}
+			}
+			.featuresTop,
+			.featuresBottom {
+				h2 {
+					color: #fff;
+					font-family: Helvetica;
+					font-size: 28px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 31.5px; /* 112.5% */
+					letter-spacing: 0.5px;
+					text-transform: uppercase;
+					padding-bottom: 14px;
+				}
+
+				ul {
+					display: grid;
+					grid-template-columns: auto auto;
+					gap: 16px;
+					li {
+						display: flex;
+						gap: 14px;
+						color: #fff;
+						font-family: 'TT Hoves Pro Trl Expanded';
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+						max-width: 313px;
+					}
+				}
+			}
+
+			.featuresTop {
+				ul {
+					grid-template-columns: auto;
+					padding-bottom: 35px;
+
+					li {
+						max-width: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.clientSliderContainer {
+	padding-bottom: 64px;
+	.clientSliderWrapper {
+		h2 {
+			color: #fff;
+			text-align: center;
+			font-family: 'TT Hoves Pro Trl Expanded';
+			font-size: 45px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 50.4px; /* 112% */
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			padding-top: 100px;
+			padding-bottom: 24px;
+		}
+	}
+}

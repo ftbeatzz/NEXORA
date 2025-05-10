@@ -1,0 +1,93 @@
+.faqListWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 23px;
+	min-height: 500px;
+	display: flex;
+	justify-content: center;
+	opacity: 0;
+	transform: translateX(40px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+	&.visible {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.faqList {
+	cursor: pointer;
+	transition: all 0.3s ease;
+	opacity: 0;
+	transform: translateX(30px);
+	transition: all 0.5s ease-out;
+
+	.faqListWrapper.visible & {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	padding-bottom: 6px;
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 1px;
+		width: 100%;
+		background: linear-gradient(
+			90deg,
+			rgba(130, 161, 164, 1),
+			rgba(130, 161, 164, 1)
+		);
+	}
+
+	.faqTitle {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		justify-content: start;
+		gap: 10px;
+		padding-left: 10px;
+	}
+
+	.arrow {
+		width: 24px;
+		height: 24px;
+		transition: transform 0.5s ease;
+	}
+
+	.rotated {
+		transform: rotate(-45deg); // можешь поменять угол (например, 180deg)
+	}
+
+	h2 {
+		color: #fff;
+		font-family: Helvetica;
+		font-size: 28px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 31.5px; /* 112.5% */
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+		transition: font-weight 0.3s ease;
+	}
+
+	.faqText {
+		color: #fff;
+		font-family: 'TT Hoves Pro Trl Expanded';
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 27.2px; /* 170% */
+		overflow: hidden;
+		transition: max-height 0.6s ease;
+		max-width: 520px;
+	}
+
+	&.active {
+		h2 {
+			font-weight: 700;
+		}
+	}
+}
