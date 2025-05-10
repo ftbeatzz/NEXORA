@@ -21,7 +21,6 @@ const HomeScreen = () => {
 	const earthRef = useRef<HTMLDivElement>(null)
 	const [visibleEarth, setVisibleEarth] = useState(false)
 
-
 	useEffect(() => {
 		const node = imgRef.current
 		if (!node) return
@@ -37,20 +36,20 @@ const HomeScreen = () => {
 		return () => observer.unobserve(node) // используем сохранённое значение
 	}, [])
 
-useEffect(() => {
-	const node = chooseRef.current
-	if (!node) return
+	useEffect(() => {
+		const node = chooseRef.current
+		if (!node) return
 
-	const observer = new IntersectionObserver(
-		([entry]) => {
-			if (entry.isIntersecting) setAnimated(true)
-		},
-		{ threshold: 0.3 }
-	)
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) setAnimated(true)
+			},
+			{ threshold: 0.3 }
+		)
 
-	observer.observe(node)
-	return () => observer.unobserve(node) // используем сохранённое значение
-}, [])
+		observer.observe(node)
+		return () => observer.unobserve(node) // используем сохранённое значение
+	}, [])
 
 	useEffect(() => {
 		const node = earthRef.current
@@ -66,9 +65,7 @@ useEffect(() => {
 		observer.observe(node)
 		return () => observer.unobserve(node) // используем сохранённое значение
 	}, [])
-	
 
-	
 	return (
 		<main className={styles.content}>
 			<section className={styles.heroContainer} id='who'>
@@ -219,7 +216,9 @@ useEffect(() => {
 								</p>
 							</div>
 						</div>
-						<img src='/public/handsLogo.png' alt='' />
+						<div className={styles.imgWrapper}>
+							<img src='/public/handsLogo.png' alt='' />
+						</div>
 						<div className={styles.rightContent}>
 							<div className={styles.handsRightBlocks}>
 								<p>
