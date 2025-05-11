@@ -50,8 +50,20 @@ header {
 		backdrop-filter: blur(12px);
 	}
 
-	@media only screen and (max-width: 1024px) {
+	@media only screen and (max-width: 1023px) {
 	padding: 0 40px; 
+	}
+
+	@media only screen and (max-width: 767px) {
+	padding: 0 18px;
+	}
+
+	.logo{
+		img{
+			@media only screen and (max-width: 767px) {
+			max-width: 45px;
+			}
+		}
 	}
 
 	&.menuOpenHeader {
@@ -103,7 +115,7 @@ header {
 	.burgerIcon {
 		display: none;
 
-		@media only screen and (max-width: 1024px) {
+		@media only screen and (max-width: 1023px) {
 			display: block;
 		}
 	}
@@ -166,7 +178,7 @@ header {
 		opacity: 0;
 		animation: slideDown 0.4s ease forwards;
 
-		@media only screen and (max-width: 1024px) {
+		@media only screen and (max-width: 1023px) {
 			display: block;
 		}
 
@@ -250,7 +262,7 @@ header {
 			width: 100%;
 			max-width: 232px;
 
-			@media only screen and (max-width: 1024px) {
+			@media only screen and (max-width: 1023px) {
 				display: none;
 			}
 
@@ -319,7 +331,7 @@ header {
 		}
 
 		.desktopNav {
-			@media only screen and (max-width: 1024px) {
+			@media only screen and (max-width: 1023px) {
 				display: none;
 			}
 		}

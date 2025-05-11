@@ -89,16 +89,24 @@
 	margin-bottom: 64px;
 	padding-top: 75px;
 
-	@media only screen and (max-width: 1024px) {
+	@media only screen and (max-width: 1023px) {
 		margin-bottom: 0;
+	}
+
+	@media only screen and (max-width: 767px) {
+		background-image: url(/public/heroBgMobile.png);
 	}
 
 	.heroWrapper {
 		max-width: 1240px;
 		margin: 0 auto;
 
-		@media only screen and (max-width: 1024px) {
+		@media only screen and (max-width: 1023px) {
 			padding: 30px 0px;
+		}
+
+		@media only screen and (max-width: 767px) {
+			padding: 20px 0px;
 		}
 	}
 
@@ -118,7 +126,7 @@
 			margin-left: 12px;
 		}
 
-		@media only screen and (max-width: 1024px) {
+		@media only screen and (max-width: 1023px) {
 			background-image: none;
 			flex-direction: column-reverse;
 			align-items: center;
@@ -155,8 +163,16 @@
 				z-index: 0;
 			}
 
+			@media only screen and (max-width: 767px) {
+				margin: 0 18px;
+			}
+
 			img {
 				max-width: 183px;
+
+				@media only screen and (max-width: 767px) {
+					max-width: 140px;
+				}
 			}
 		}
 
@@ -165,14 +181,14 @@
 				margin-left: 25px;
 			}
 
-			@media only screen and (max-width: 1024px) {
+			@media only screen and (max-width: 1023px) {
 				margin: 0;
 			}
 			.heroTxt {
 				padding-bottom: 44px;
 				padding-top: 44px;
 
-				@media only screen and (max-width: 1024px) {
+				@media only screen and (max-width: 1023px) {
 					padding-top: 10px;
 					padding-bottom: 20px;
 					display: flex;
@@ -193,10 +209,14 @@
 					max-width: 723px;
 					padding-bottom: 30px;
 
-					@media only screen and (max-width: 1024px) {
+					@media only screen and (max-width: 1023px) {
 						font-size: 32px;
 						text-align: center;
 						padding-bottom: 12px;
+					}
+
+					@media only screen and (max-width: 767px) {
+						font-size: 18px;
 					}
 				}
 
@@ -210,9 +230,13 @@
 					padding-bottom: 6px;
 					max-width: 550px;
 
-					@media only screen and (max-width: 1024px) {
+					@media only screen and (max-width: 1023px) {
 						font-size: 18px;
 						text-align: center;
+					}
+
+					@media only screen and (max-width: 767px) {
+						font-size: 16px;
 					}
 				}
 
@@ -224,7 +248,7 @@
 			.heroBtn {
 				width: 100%;
 
-				@media only screen and (max-width: 1024px) {
+				@media only screen and (max-width: 1023px) {
 					display: flex;
 					justify-content: center;
 				}
@@ -275,9 +299,14 @@
 		padding-top: 64px;
 		padding-bottom: 100px;
 
-		@media only screen and (max-width: 1024px) {
+		@media only screen and (max-width: 1023px) {
 			padding-top: 46px;
 			padding-bottom: 46px;
+		}
+
+		@media only screen and (max-width: 767px) {
+			padding-top: 32px;
+			padding-bottom: 32px;
 		}
 
 		.faqContent {
@@ -298,10 +327,15 @@
 				margin: 0px 12px;
 			}
 
-			@media only screen and (max-width: 1024px) {
+			@media only screen and (max-width: 1023px) {
 				padding: 24px;
 				flex-direction: column;
 				margin: 0 40px;
+			}
+
+			@media only screen and (max-width: 767px) {
+				margin: 0 18px;
+				padding: 12px;
 			}
 
 			&::before {
@@ -363,11 +397,8 @@
 				margin: 0px 12px;
 			}
 
-			@media only screen and (max-width: 1024px) {
+			@media only screen and (max-width: 1023px) {
 				margin: 0 40px;
-
-				.stickWrapper {
-				}
 
 				.silverLine {
 					width: 100%;
@@ -378,7 +409,15 @@
 					svg {
 						transform: rotate(90deg);
 					}
+
+					@media only screen and (max-width: 767px) {
+						display: none;
+					}
 				}
+			}
+
+			@media only screen and (max-width: 767px) {
+				margin: 0 18px;
 			}
 			h2 {
 				color: #d9d9d9;
@@ -387,14 +426,19 @@
 				font-size: 45px;
 				font-style: normal;
 				font-weight: 400;
-				line-height: 50.4px; /* 112% */
+				line-height: 112%; /* 112% */
 				letter-spacing: 1px;
 				padding-bottom: 32px;
 				padding-top: 19px;
 
-				@media only screen and (max-width: 1024px) {
+				@media only screen and (max-width: 1023px) {
 					font-size: 32px;
 					padding-top: 16px;
+				}
+
+				@media only screen and (max-width: 767px) {
+					font-size: 24px;
+					padding-top: 12px;
 				}
 			}
 
@@ -405,14 +449,20 @@
 				font-size: 28px;
 				font-style: normal;
 				font-weight: 400;
-				line-height: 50.4px; /* 180% */
+				line-height: 180%; /* 180% */
 				letter-spacing: 1px;
 				padding-top: 32px;
 				padding-bottom: 19px;
 
-				@media only screen and (max-width: 1024px) {
+				@media only screen and (max-width: 1023px) {
 					font-weight: 300;
 					font-size: 24px;
+				}
+
+				@media only screen and (max-width: 767px) {
+					font-size: 18px;
+					padding-top: 0px;
+					padding-bottom: 0;
 				}
 			}
 
@@ -421,7 +471,7 @@
 				align-items: center;
 				justify-content: space-between;
 
-				@media only screen and (max-width: 1024px) {
+				@media only screen and (max-width: 1023px) {
 					flex-direction: column;
 					gap: 12px;
 				}
@@ -445,6 +495,10 @@
 					letter-spacing: 0.5px;
 					text-transform: uppercase;
 					padding-bottom: 14px;
+
+					@media only screen and (max-width: 767px) {
+						font-size: 20px;
+					}
 				}
 
 				li {
@@ -459,23 +513,31 @@
 					padding-bottom: 4px;
 					margin-left: 25px;
 
-					@media only screen and (max-width: 1024px) {
+					@media only screen and (max-width: 1023px) {
 						max-width: none;
+					}
+
+					@media only screen and (max-width: 767px) {
+						font-size: 15px;
 					}
 				}
 
 				.chooseImg {
 					padding-bottom: 64px;
 
-					@media only screen and (max-width: 1024px) {
+					@media only screen and (max-width: 1023px) {
 						padding-bottom: 24px;
 					}
 
 					img {
 						max-width: 205px;
 
-						@media only screen and (max-width: 1024px) {
+						@media only screen and (max-width: 1023px) {
 							max-width: 155px;
+						}
+
+						@media only screen and (max-width: 767px) {
+							max-width: 102px;
 						}
 					}
 				}
@@ -492,8 +554,11 @@
 		width: 100%;
 		max-width: 1240px;
 
-		@media only screen and (max-width: 1024px) {
+		@media only screen and (max-width: 1023px) {
 			margin: 0 40px;
+		}
+		@media only screen and (max-width: 767px) {
+			margin: 0 18px;
 		}
 		h2 {
 			color: #d9d9d9;
@@ -502,13 +567,17 @@
 			font-size: 45px;
 			font-style: normal;
 			font-weight: 400;
-			line-height: 50.4px; /* 112% */
+			line-height: 112%; /* 112% */
 			letter-spacing: 1px;
 			padding-top: 100px;
 
-			@media only screen and (max-width: 1024px) {
+			@media only screen and (max-width: 1023px) {
 				font-size: 32px;
 				padding-top: 47px;
+			}
+
+			@media only screen and (max-width: 767px) {
+				font-size: 24px;
 			}
 		}
 
@@ -519,12 +588,17 @@
 			font-size: 28px;
 			font-style: normal;
 			font-weight: 400;
-			line-height: 46.4px; /* 165.714% */
+			line-height: 165.714%; /* 165.714% */
 			letter-spacing: 1px;
 			padding-bottom: 32px;
 
-			@media only screen and (max-width: 1024px) {
+			@media only screen and (max-width: 1023px) {
 				font-size: 24px;
+			}
+
+			@media only screen and (max-width: 767px) {
+				font-size: 18px;
+				padding-bottom: 18px;
 			}
 		}
 
@@ -537,7 +611,7 @@
 				margin: 0 12px;
 			}
 
-			@media only screen and (max-width: 1024px) {
+			@media only screen and (max-width: 1023px) {
 				margin: 0;
 				flex-direction: column;
 			}
@@ -553,8 +627,12 @@
 				animation: levitate 3s ease-in-out infinite;
 				width: 100%;
 
-				@media only screen and (max-width: 1024px) {
+				@media only screen and (max-width: 1023px) {
 					max-width: 288px;
+				}
+
+				@media only screen and (max-width: 767px) {
+					max-width: 231px;
 				}
 			}
 
@@ -564,12 +642,20 @@
 				flex-direction: column;
 				gap: 30px;
 
+				@media only screen and (max-width: 767px) {
+					gap: 12px;
+				}
+
 				.handsLeftBlocks,
 				.handsRightBlocks {
 					padding: 32px;
 					background: rgba(0, 183, 255, 0.1);
 					box-shadow: 0px 4px 20px 0px rgba(10, 124, 255, 0.15);
 					backdrop-filter: blur(2px);
+
+					@media only screen and (max-width: 767px) {
+						padding: 12px;
+					}
 
 					&::before {
 						content: '';
@@ -607,8 +693,12 @@
 						letter-spacing: -0.48px;
 						max-width: 350px;
 
-						@media only screen and (max-width: 1024px) {
+						@media only screen and (max-width: 1023px) {
 							max-width: none;
+						}
+
+						@media only screen and (max-width: 767px) {
+							font-size: 15px;
 						}
 					}
 				}
@@ -634,7 +724,7 @@
 	justify-content: center;
 	padding: 64px 0px;
 
-	@media only screen and (max-width: 1024px) {
+	@media only screen and (max-width: 1023px) {
 		padding: 18px 0px;
 	}
 
@@ -651,24 +741,28 @@
 				margin: 0 12px;
 			}
 
-			@media only screen and (max-width: 1024px) {
+			@media only screen and (max-width: 1023px) {
 				flex-direction: column;
 				margin: 0 40px;
 				gap: 12px;
+			}
+
+			@media only screen and (max-width: 767px) {
+			margin: 0 18px;
 			}
 
 			.earthLeft {
 				max-width: 394px;
 				width: 100%;
 
-				@media only screen and (max-width: 1024px) {
+				@media only screen and (max-width: 1023px) {
 					width: auto;
 				}
 				img {
 					max-width: 440px;
 					width: 100%;
 
-					@media only screen and (max-width: 1024px) {
+					@media only screen and (max-width: 1023px) {
 						transform: rotate(90deg);
 						max-width: 240px;
 					}
@@ -679,7 +773,7 @@
 				display: flex;
 				align-items: center;
 				gap: 24px;
-				@media only screen and (max-width: 1024px) {
+				@media only screen and (max-width: 1023px) {
 					width: 100%;
 				}
 			}
@@ -693,17 +787,21 @@
 					min-width: 300px; //
 				}
 
-				@media only screen and (max-width: 1024px) {
+				@media only screen and (max-width: 1023px) {
 					display: none;
 				}
 			}
 
 			.earthRight {
-				@media only screen and (max-width: 1024px) {
+				@media only screen and (max-width: 1023px) {
 					width: 100%;
 					display: flex;
 					justify-content: space-between;
 					gap: 12px;
+				}
+
+				@media only screen and (max-width: 767px) {
+					flex-direction: column;
 				}
 				.topList,
 				.bottomList {
@@ -728,6 +826,10 @@
 						flex-direction: column;
 						gap: 12px;
 						min-width: 330px;
+
+						@media only screen and (max-width: 767px) {
+						min-width: auto;
+						}
 						li {
 							color: #fff;
 							font-family: 'TT Hoves Pro Trl Expanded';
@@ -739,8 +841,12 @@
 							gap: 12px;
 							align-items: center;
 
-							@media only screen and (max-width: 1024px) {
+							@media only screen and (max-width: 1023px) {
 								align-items: start;
+							}
+
+							@media only screen and (max-width: 767px) {
+							font-size: 15px;
 							}
 						}
 					}
@@ -749,7 +855,7 @@
 				.bottomList {
 					padding-top: 42px;
 
-					@media only screen and (max-width: 1024px) {
+					@media only screen and (max-width: 1023px) {
 						padding-top: 0;
 					}
 				}
@@ -763,8 +869,12 @@
 	justify-content: center;
 	padding: 64px 0px;
 
-	@media only screen and (max-width: 1024px) {
+	@media only screen and (max-width: 1023px) {
 		padding: 46px 0;
+	}
+
+	@media only screen and (max-width: 767px) {
+	padding: 32px 0;
 	}
 	.countingWrapper {
 		width: 100%;
@@ -774,8 +884,12 @@
 			margin: 0 12px;
 		}
 
-		@media only screen and (max-width: 1024px) {
+		@media only screen and (max-width: 1023px) {
 			margin: 0 40px;
+		}
+
+		@media only screen and (max-width: 767px) {
+		margin: 0 18px;
 		}
 		.countingContent {
 			display: flex;
@@ -789,14 +903,18 @@
 			padding: 32px 26px;
 			gap: 12px;
 
-			@media only screen and (max-width: 1024px) {
+			@media only screen and (max-width: 1023px) {
 				flex-direction: column;
+			}
+
+			@media only screen and (max-width: 767px) {
+			padding: 12px;
 			}
 
 			svg {
 				max-height: 101px;
 
-				@media only screen and (max-width: 1024px) {
+				@media only screen and (max-width: 1023px) {
 					display: none;
 				}
 			}
@@ -833,9 +951,13 @@
 					font-size: 45px;
 					font-style: normal;
 					font-weight: 500;
-					line-height: 50.4px; /* 112% */
+					line-height: 112%; /* 112% */
 					letter-spacing: 1px;
 					padding-bottom: 8px;
+
+					@media only screen and (max-width: 767px) {
+					font-size: 26px;
+					}
 				}
 				p {
 					color: #fff;
@@ -847,8 +969,12 @@
 					text-transform: capitalize;
 					max-width: 340px;
 
-					@media only screen and (max-width: 1024px) {
+					@media only screen and (max-width: 1023px) {
 						max-width: none;
+					}
+
+					@media only screen and (max-width: 767px) {
+					font-size: 15px;
 					}
 				}
 			}
@@ -864,6 +990,10 @@
 	padding: 16px 0px;
 	display: flex;
 	justify-content: center;
+
+	@media only screen and (max-width: 767px) {
+	background-image: url(/public/keyBgMobile.png);
+	}
 	.keyWrapper {
 		width: 100%;
 		max-width: 1240px;
@@ -872,8 +1002,12 @@
 			margin: 0 12px;
 		}
 
-		@media only screen and (max-width: 1024px) {
+		@media only screen and (max-width: 1023px) {
 			margin: 0 40px;
+		}
+
+		@media only screen and (max-width: 767px) {
+		margin: 0 18px;
 		}
 		h2 {
 			color: #fff;
@@ -881,12 +1015,16 @@
 			font-size: 45px;
 			font-style: normal;
 			font-weight: 400;
-			line-height: 50.4px; /* 112% */
+			line-height: 112%; /* 112% */
 			letter-spacing: 1px;
 
-			@media only screen and (max-width: 1024px) {
+			@media only screen and (max-width: 1023px) {
 				font-size: 32px;
 				text-align: center;
+			}
+
+			@media only screen and (max-width: 767px) {
+			font-size: 24px;
 			}
 		}
 		h3 {
@@ -895,15 +1033,19 @@
 			font-size: 32px;
 			font-style: normal;
 			font-weight: 400;
-			line-height: 50.4px; /* 157.5% */
+			line-height: 157.5%; /* 157.5% */
 			letter-spacing: 1px;
 			padding: 24px 0px;
 
-			@media only screen and (max-width: 1024px) {
+			@media only screen and (max-width: 1023px) {
 				font-size: 24px;
 				padding-top: 12px;
 				padding-bottom: 24px;
 				text-align: center;
+			}
+
+			@media only screen and (max-width: 767px) {
+			font-size: 18px;
 			}
 		}
 		.keyContent {
@@ -911,7 +1053,7 @@
 			grid-template-columns: auto auto;
 			gap: 12px;
 
-			@media only screen and (max-width: 1024px) {
+			@media only screen and (max-width: 1023px) {
 				grid-template-columns: auto;
 			}
 		}
@@ -921,6 +1063,10 @@
 			width: 100%;
 			padding: 22px 24px;
 			border-radius: 24px;
+
+			@media only screen and (max-width: 767px) {
+			padding: 12px;
+			}
 			h4 {
 				color: #fff;
 				font-family: Helvetica;
@@ -929,6 +1075,10 @@
 				font-weight: 700;
 				line-height: 28px; /* 140% */
 				text-transform: capitalize;
+
+				@media only screen and (max-width: 767px) {
+				font-size: 18px;
+				}
 			}
 			p {
 				color: #fff;
@@ -941,8 +1091,12 @@
 				padding-top: 6px;
 				max-width: 566px;
 
-				@media only screen and (max-width: 1024px) {
-				max-width: none;
+				@media only screen and (max-width: 1023px) {
+					max-width: none;
+				}
+
+				@media only screen and (max-width: 767px) {
+				font-size: 15px;
 				}
 			}
 		}
@@ -995,16 +1149,20 @@
 			margin: 0 12px;
 		}
 
-		@media only screen and (max-width: 1024px) {
+		@media only screen and (max-width: 1023px) {
 			margin: 0;
 			margin: 0 40px;
+		}
+
+		@media only screen and (max-width: 767px) {
+		margin: 0 18px;
 		}
 		.featuresContent {
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
 
-			@media only screen and (max-width: 1024px) {
+			@media only screen and (max-width: 1023px) {
 				flex-direction: column-reverse;
 			}
 
@@ -1013,8 +1171,8 @@
 					max-width: 400px;
 					width: 100%;
 
-					@media only screen and (max-width: 1024px) {
-					max-width: 280px;
+					@media only screen and (max-width: 1023px) {
+						max-width: 280px;
 					}
 				}
 			}
@@ -1031,9 +1189,14 @@
 					text-transform: uppercase;
 					padding-bottom: 14px;
 
-					@media only screen and (max-width: 1024px) {
-					font-size: 24px;
-					text-align: center;
+					@media only screen and (max-width: 1023px) {
+						font-size: 24px;
+						text-align: center;
+					}
+
+					@media only screen and (max-width: 767px) {
+					font-size: 20px;
+					padding-bottom: 8px;
 					}
 				}
 
@@ -1041,6 +1204,11 @@
 					display: grid;
 					grid-template-columns: auto auto;
 					gap: 16px;
+
+					@media only screen and (max-width: 767px) {
+					gap: 8px;
+					grid-template-columns: auto;
+					}
 					li {
 						display: flex;
 						gap: 14px;
@@ -1051,6 +1219,11 @@
 						font-weight: 400;
 						line-height: normal;
 						max-width: 313px;
+
+						@media only screen and (max-width: 767px) {
+						gap: 12px;
+						font-size: 15px;
+						}
 					}
 				}
 			}
@@ -1060,16 +1233,20 @@
 					grid-template-columns: auto;
 					padding-bottom: 35px;
 
-					@media only screen and (max-width: 1024px) {
-					justify-content: center;
-					width: 100%;
+					@media only screen and (max-width: 1023px) {
+						justify-content: center;
+						width: 100%;
 					}
 
 					li {
 						max-width: none;
 
-						@media only screen and (max-width: 1024px) {
-						text-align: center;
+						@media only screen and (max-width: 1023px) {
+							text-align: center;
+						}
+
+						@media only screen and (max-width: 767px) {
+						text-align: left;
 						}
 					}
 				}
@@ -1081,8 +1258,8 @@
 .clientSliderContainer {
 	padding-bottom: 64px;
 
-	@media only screen and (max-width: 1024px) {
-	padding-bottom: 46px;
+	@media only screen and (max-width: 1023px) {
+		padding-bottom: 46px;
 	}
 	.clientSliderWrapper {
 		h2 {
@@ -1092,16 +1269,23 @@
 			font-size: 45px;
 			font-style: normal;
 			font-weight: 400;
-			line-height: 50.4px; /* 112% */
+			line-height: 112%; /* 112% */
 			letter-spacing: 1px;
 			text-transform: uppercase;
 			padding-top: 100px;
 			padding-bottom: 24px;
 
-			@media only screen and (max-width: 1024px) {
-			font-size: 32px;
-			margin: 0 40px;
-			padding-top: 46px;
+			@media only screen and (max-width: 1023px) {
+				font-size: 32px;
+				margin: 0 40px;
+				padding-top: 46px;
+			}
+
+			@media only screen and (max-width: 767px) {
+			font-size: 24px;
+			padding-top: 0;
+			padding-bottom: 12px;
+			font-size: 24px;
 			}
 		}
 	}

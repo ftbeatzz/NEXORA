@@ -80,7 +80,7 @@ useEffect(() => {
 						</div>
 						<div
 							className={styles.faqText}
-							style={{ maxHeight: isActive ? '200px' : '0px' }}
+							style={{ maxHeight: isActive ? '240px' : '0px' }}
 						>
 							<p>{item.text}</p>
 						</div>

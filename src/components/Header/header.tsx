@@ -17,7 +17,6 @@ const Header = () => {
 
 	return (
 		<>
-			{/* затемняющая/размывающая подложка */}
 			{menuOpen && (
 				<div className={styles.overlay} onClick={() => setMenuOpen(false)} />
 			)}
@@ -36,16 +35,13 @@ const Header = () => {
 							<LogoHeader />
 						</a>
 					</div>
-					{/* Бургер-иконка для мобилок */}
 					<div
 						className={`${styles.burgerIcon} ${menuOpen ? styles.open : ''}`}
 						onClick={() => setMenuOpen(!menuOpen)}
 					>
-						{/* сразу обе иконки, их видимость и поворот — через CSS */}
 						<BurgerMenu className={styles.iconBurger} />
 						<CloseIcon className={styles.iconClose} />
 					</div>
-					{/* Навигация для десктопа */}
 					<nav className={styles.desktopNav}>
 						<ul>
 							<li>
@@ -83,7 +79,6 @@ const Header = () => {
 					</div>
 				</div>
 
-				{/* Мобильное меню */}
 				{menuOpen && (
 					<div className={styles.mobileMenu}>
 						<nav>

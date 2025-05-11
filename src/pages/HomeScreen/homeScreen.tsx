@@ -198,7 +198,9 @@ const HomeScreen = () => {
 					>
 						YOU'RE IN SECURE HANDS
 					</h2>
-					<h3>
+					<h3
+						className={`${styles.animateIn} ${animated ? styles.fadeInUp : ''}`}
+					>
 						NEXORA VAULT is engineered for resilience, privacy, and total
 						digital sovereignty.
 					</h3>
@@ -392,79 +394,77 @@ const HomeScreen = () => {
 
 			<section className={styles.featuresContainer}>
 				<div className={styles.featuresWrapper}>
-						<div className={styles.featuresContent}>
-							<div className={styles.featuresLeft}>
-								<div className={styles.featuresTop}>
-									<h2>What You Get</h2>
-									<ul>
-										<li>
-											<span>
-												<GreenCheck />
-											</span>
-											Verified identity-bound vaults with biometric
-											authentication
-										</li>
-										<li>
-											<span>
-												<GreenCheck />
-											</span>
-											Access to your assets from any secure device, anytime
-										</li>
-										<li>
-											<span>
-												<GreenCheck />
-											</span>
-											Full control of encryption keys and storage segmentation
-										</li>
-									</ul>
-								</div>
-								<div className={styles.featuresBottom}>
-									<h2>OuR FEATURES INCLUDE</h2>
-									<ul>
-										<li>
-											<span>
-												<GpuIcon />
-											</span>
-											AI-secured threat detection and alerting
-										</li>
-										<li>
-											<span>
-												<LockIcon />
-											</span>
-											Zero-knowledge encryption with no third-party access
-										</li>
-										<li>
-											<span>
-												<ShieldIcon />
-											</span>
-											Support for enterprise-scale asset protection
-										</li>
-										<li>
-											<span>
-												<NetworkIcon />
-											</span>
-											Immutable activity logs for full compliance review
-										</li>
-										<li>
-											<span>
-												<HandsIcon />
-											</span>
-											24/7 access and monitoring across secure environments
-										</li>
-										<li>
-											<span>
-												<PercentageIcon />
-											</span>
-											Fully anonymous vault options with tiered security
-											profiles
-										</li>
-									</ul>
-								</div>
+					<div className={styles.featuresContent}>
+						<div className={styles.featuresLeft}>
+							<div className={styles.featuresTop}>
+								<h2>What You Get</h2>
+								<ul>
+									<li>
+										<span>
+											<GreenCheck />
+										</span>
+										Verified identity-bound vaults with biometric authentication
+									</li>
+									<li>
+										<span>
+											<GreenCheck />
+										</span>
+										Access to your assets from any secure device, anytime
+									</li>
+									<li>
+										<span>
+											<GreenCheck />
+										</span>
+										Full control of encryption keys and storage segmentation
+									</li>
+								</ul>
 							</div>
-							<div className={styles.featuresRight}>
-								<img src='/public/bull.png' alt='' />
+							<div className={styles.featuresBottom}>
+								<h2>OuR FEATURES INCLUDE</h2>
+								<ul>
+									<li>
+										<span>
+											<GpuIcon />
+										</span>
+										AI-secured threat detection and alerting
+									</li>
+									<li>
+										<span>
+											<LockIcon />
+										</span>
+										Zero-knowledge encryption with no third-party access
+									</li>
+									<li>
+										<span>
+											<ShieldIcon />
+										</span>
+										Support for enterprise-scale asset protection
+									</li>
+									<li>
+										<span>
+											<NetworkIcon />
+										</span>
+										Immutable activity logs for full compliance review
+									</li>
+									<li>
+										<span>
+											<HandsIcon />
+										</span>
+										24/7 access and monitoring across secure environments
+									</li>
+									<li>
+										<span>
+											<PercentageIcon />
+										</span>
+										Fully anonymous vault options with tiered security profiles
+									</li>
+								</ul>
 							</div>
 						</div>
+						<div className={styles.featuresRight}>
+							<img src='/public/bull.png' alt='' />
+						</div>
+					</div>
 				</div>
 			</section>
 
