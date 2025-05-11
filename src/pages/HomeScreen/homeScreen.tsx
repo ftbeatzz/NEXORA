@@ -90,7 +90,7 @@ const HomeScreen = () => {
 							</div>
 						</div>
 						<div className={styles.heroImg}>
-							<img src='/public/iceLogo.png' alt='' />
+							<img src='/iceLogo.png' alt='' />
 						</div>
 					</div>
 				</div>
@@ -101,7 +101,7 @@ const HomeScreen = () => {
 					<div className={styles.faqContent}>
 						<div className={styles.faqImg} ref={imgRef}>
 							<img
-								src='/public/faqImg.png'
+								src='/faqImg.png'
 								alt='FAQ image'
 								className={visible ? styles.show : ''}
 							/>
@@ -128,7 +128,7 @@ const HomeScreen = () => {
 								}`}
 							>
 								<div className={styles.chooseImg}>
-									<img src='/public/forPartners.png' alt='' />
+									<img src='/forPartners.png' alt='' />
 								</div>
 								<div className={styles.chooseTxt}>
 									<h3>FOR PARTNERS</h3>
@@ -157,7 +157,7 @@ const HomeScreen = () => {
 								}`}
 							>
 								<div className={styles.chooseImg}>
-									<img src='/public/forClients.png' alt='' />
+									<img src='/forClients.png' alt='' />
 								</div>
 								<div className={styles.chooseTxt}>
 									<h3>FOR ENTERPRISE CLIENTS</h3>
@@ -220,7 +220,7 @@ const HomeScreen = () => {
 							</div>
 						</div>
 						<div className={styles.imgWrapper}>
-							<img src='/public/handsLogo.png' alt='' />
+							<img src='/handsLogo.png' alt='' />
 						</div>
 						<div className={styles.rightContent}>
 							<div className={styles.handsRightBlocks}>
@@ -248,7 +248,7 @@ const HomeScreen = () => {
 								visibleEarth ? styles.fadeInLeft : styles.animateIn
 							}`}
 						>
-							<img src='/public/earth.png' alt='' />
+							<img src='/earth.png' alt='' />
 						</div>
 						<div className={styles.earthRightWrapper}>
 							<div
@@ -256,7 +256,7 @@ const HomeScreen = () => {
 									visibleEarth ? styles.fadeInLeft : styles.animateIn
 								}`}
 							>
-								<img src='/public/lines.png' alt='' />
+								<img src='/lines.png' alt='' />
 							</div>
 							<div className={styles.earthRight}>
 								<div className={styles.topList}>
@@ -462,7 +462,7 @@ const HomeScreen = () => {
 							</div>
 						</div>
 						<div className={styles.featuresRight}>
-							<img src='/public/bull.png' alt='' />
+							<img src='/bull.png' alt='' />
 						</div>
 					</div>
 				</div>
