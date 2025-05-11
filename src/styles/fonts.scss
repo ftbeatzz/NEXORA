@@ -1,20 +1,23 @@
 @font-face {
   font-family: 'Helvetica';
-  src: url('../assets/fonts/Helvetica-Bold.ttf') format('truetype');
+  src: url('/fonts/Helvetica-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'TT Hoves Pro Trl Expanded';
-  src: url('../assets/fonts/TT-Hoves-Pro-Light.ttf') format('truetype');
+  src: url('/fonts/TT-Hoves-Pro-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'TT Hoves Pro Trl Expanded';
-  src: url('../assets/fonts/TT-Hoves-Pro-Medium.ttf') format('truetype');
+  src: url('/fonts/TT-Hoves-Pro-Medium.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
