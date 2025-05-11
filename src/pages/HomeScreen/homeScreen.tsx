@@ -12,6 +12,7 @@ import NetworkIcon from '../../assets/icons/NetworkIcon'
 import HandsIcon from '../../assets/icons/HandsIcon'
 import PercentageIcon from '../../assets/icons/PercentageIcon'
 import ClientSlider from '../../components/ClientSlider/ClientSlider'
+import EcllipseIcon from '../../assets/icons/EcllipseIcon'
 
 const HomeScreen = () => {
 	const imgRef = useRef<HTMLDivElement>(null)
@@ -274,6 +275,9 @@ const HomeScreen = () => {
 												}`}
 												style={{ animationDelay: `${index * 0.2}s` }}
 											>
+												<span>
+													<EcllipseIcon />
+												</span>
 												{text}
 											</li>
 										))}
@@ -295,6 +299,9 @@ const HomeScreen = () => {
 												}`}
 												style={{ animationDelay: `${(index + 6) * 0.2}s` }}
 											>
+												<span>
+													<EcllipseIcon />
+												</span>
 												{text}
 											</li>
 										))}
@@ -385,7 +392,6 @@ const HomeScreen = () => {
 
 			<section className={styles.featuresContainer}>
 				<div className={styles.featuresWrapper}>
-					<div className={styles.featuresWrapper}>
 						<div className={styles.featuresContent}>
 							<div className={styles.featuresLeft}>
 								<div className={styles.featuresTop}>
@@ -459,7 +465,6 @@ const HomeScreen = () => {
 								<img src='/public/bull.png' alt='' />
 							</div>
 						</div>
-					</div>
 				</div>
 			</section>
 

@@ -50,8 +50,12 @@ header {
 		backdrop-filter: blur(12px);
 	}
 
+	@media only screen and (max-width: 1024px) {
+	padding: 0 40px; 
+	}
+
 	&.menuOpenHeader {
-		background: #000f21;
+		background: #010A15;
 		border: none;
 		backdrop-filter: none;
 		border-bottom: none;
@@ -156,6 +160,7 @@ header {
 		background: #000f21;
 		z-index: 999;
 		padding: 24px;
+		border-radius: 0px 0px 24px 24px;
 
 		transform: translateY(-10%);
 		opacity: 0;
